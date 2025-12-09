@@ -695,7 +695,7 @@ html body div.container div.row.profile div.col.left div.contact {
    Width
 =========================== */
 
-.general-about, .mood, .contact, .url-info, .table-section, .profile-info, .blog-preview, .blurbs, .friends {
+.general-about, .mood, .contact, .url-info, .table-section, .profile-info, .blog-preview, .blurbs, .friends, .edit-link {
     width: 100%;
     margin: auto !important;
     max-width: var(--max-width);
