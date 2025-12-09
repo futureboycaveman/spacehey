@@ -330,7 +330,7 @@ nav .links a {
 }
 .blog-preview h4::before {
     content: "Blog";
-    color: #000;
+    color: var(--text);
     position: absolute;
     left: 0;
     top: 0;
@@ -682,6 +682,21 @@ footer .links {
 .contact .inner a:hover {
     opacity: 1;
 }
+
+.friends-grid .person a {
+    transition: opacity 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+.friends-grid .person:hover a {
+    opacity: 0.25;
+}
+
+.friends-grid .person a:hover {
+    opacity: 1;
+}
+
 
 /* ===========================
    Overrides
