@@ -98,6 +98,16 @@ navbar {
 }
 
 /* ===========================
+   Width
+=========================== */
+
+.general-about, .mood, .contact, .url-info, .table-section, .profile-info, .blog-preview, .blurbs, .friends, .edit-link {
+    width: 100%;
+    margin: auto !important;
+    max-width: var(--max-width);
+}
+
+/* ===========================
    Contacts
 =========================== */
 .profile .contact .f-row {
@@ -689,16 +699,6 @@ nav *, nav *::before, nav *::after {
 html body div.container div.row.profile div.col.left div.contact {
     display: block !important;
     opacity: 1 !important;
-}
-
-/* ===========================
-   Width
-=========================== */
-
-.general-about, .mood, .contact, .url-info, .table-section, .profile-info, .blog-preview, .blurbs, .friends, .edit-link {
-    width: 100%;
-    margin: auto !important;
-    max-width: var(--max-width);
 }
 
 /* ===========================
