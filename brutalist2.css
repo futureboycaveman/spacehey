@@ -1,0 +1,698 @@
+/*CSS Reset*/
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;border:0;background:none;color:inherit;font:inherit;text-decoration:none;vertical-align:baseline}html,body,div,span,section,article,main,nav,header,footer,aside,p{display:block}table{border-collapse:collapse;border-spacing:0}ol,ul,menu{list-style:none}a, .right a, .right form {all:unset;color:blue !important;cursor:pointer;text-decoration:underline}a:visited{color:purple}a:hover,a:active{text-decoration:none}input,textarea,select,button{all:revert;box-sizing:border-box}img,video,picture,svg,canvas{display:block;max-width:100%;height:auto}h1,h2,h3,h4,h5,h6{all:unset;display:block;font-weight:700}p,span,b,i,strong,em{all:unset;display:inline}
+.profile .contact,.profile .url-info,.profile .table-section,.setting-section,.home-actions{border:none}.profile .contact .heading,.profile .table-section .heading,.setting-section .heading,.home-actions .heading,.profile .blurbs .heading,.profile .friends .heading{padding:0;background:#fff0;color:inherit}.details-table td,.details-table td:first-child{background:#fff0;color:inherit}.profile .blurbs .inner,.profile .friends .inner,.blog-entry .comments .inner,.bulletin .comments .inner,.setting-section .inner{padding:0}.comments-table td:first-child,.music-table td:first-child{background:#fff0;text-align:left;}.comments-table td,.music-table td{background:#fff0;vertical-align:top}
+
+/* ===========================
+   Variables
+=========================== */
+:root {
+    --padding: 8px;
+    --margin: 2.5rem;
+    --max-width: 800px;
+}
+
+/* ===========================
+   Layout generale
+=========================== */
+body {
+    font-family: var(--font-family);
+    line-height: 1.5;
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: var(--font-size);
+    overflow-x: clip;
+    letter-spacing: -0.015em;
+}
+
+p {
+    color: var(--text);
+}
+
+*, *::before, *::after {
+    color: var(--text);
+}
+
+a {
+    color: var(--link) !important;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+}
+
+main {
+    background: transparent;
+    font-size: 100%;
+    padding: var(--padding);
+    max-width: none;
+    color: var(--text);
+}
+
+main .left {
+    margin-bottom: var(--margin);
+}
+
+main .right {
+    padding-top: 9.5em !important;
+}
+
+.friends-grid,
+.comments-table {
+    margin-top: calc(var(--margin) / 2);
+}
+
+/* Colonne */
+.row {
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+.details-table td,
+.details-table td:first-child {
+    display: block;
+}
+
+.table-section:has(a[href*="instagram"]) td:last-child,
+.table-section:has(a[href*="instagram"]) th:last-child {
+    display: none !important;
+}
+
+.col.w-40.left {
+    margin-bottom: var(--margin);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.col.w-40.left .table-section {
+    order: 2;
+}
+
+.col.w-40.left .table-section:last-of-type {
+    order: 1;
+}
+
+/* ===========================
+   Contacts
+=========================== */
+.profile .contact .f-row {
+    margin: 0;
+    font-size: 1em;
+    display: contents;
+}
+
+.contact .f-col {
+    width: 50%;
+    display: contents;
+}
+
+.contact .inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+nav,
+footer,
+.profile .contact {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+/* ===========================
+   Typography
+=========================== */
+.logout-btn {
+    font-family: inherit;
+    color: blue;
+    text-transform: inherit;
+}
+
+.profile .general-about,
+.profile .url-info,
+.profile .mood,
+.profile .contact,
+.profile .table-section {
+    margin: 0;
+    padding: 0;
+}
+
+.profile h1 {
+    font-size: 6vw;
+}
+
+.profile-info {
+    border: solid 1px var(--text);
+}
+
+.music .heading a.more,
+.specials .heading a.more,
+.friends .heading a.more,
+.new-people .top a.more,
+.bulletin-preview .heading a.more,
+.blog-sub-preview .heading a.more,
+.spa .heading .spa-info {
+    float: right;
+    margin-top: 1px;
+    font-size: 100%;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.profile .contact .heading h4,
+.profile .table-section .heading h4,
+.profile .blurbs .heading h4,
+.profile .friends .heading h4,
+.blog-entry .comments .heading h4,
+.bulletin .comments .heading h4,
+.home-actions .heading h1,
+.setting-section .heading h4,
+.statistics .heading h4,
+.profile .blurbs .section h4,
+.blog-preview h4 {
+    font-size: 1.5rem;
+    margin-top: var(--margin);
+    margin-bottom: calc(var(--margin) / 4);
+    color: inherit;
+}
+
+.profile .blurbs .section h4 {
+    font-size: 1rem;
+}
+
+.profile .blurbs .section:first-child h4:first-child {
+    margin-top: 0;
+}
+
+span.count {
+    color: inherit;
+    font-weight: bold;
+}
+
+.mood {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--padding);
+    margin-top: calc(var(--margin) / 2) !important;
+}
+
+.mood p:nth-child(2) {
+    grid-column: span 3;
+}
+
+/* ===========================
+   Links
+=========================== */
+.table-section:last-of-type .details-table tbody {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--padding);
+}
+
+.table-section:last-of-type .details-table tr,
+.table-section:last-of-type .details-table td {
+    display: contents;
+    width: 100%;
+}
+
+/* ===========================
+   Interests
+=========================== */
+.table-section .details-table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding);
+}
+
+/* ===========================
+   Navigation
+=========================== */
+nav {
+    font-size: inherit;
+    position: sticky;
+    top: 0;
+    background: var(--nav-bg);
+    z-index: 9999;
+}
+
+nav .top {
+    background: transparent;
+    padding: var(--padding);
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: auto;
+    max-width: var(--max-width);
+}
+
+nav .top .left {
+    filter: var(--invert);
+}
+
+nav .links {
+    background-color: transparent;
+    padding: var(--padding);
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .links li:not(:last-child)::after,
+footer .links li:not(:last-child)::after {
+    display: none;
+}
+
+nav .links a {
+    text-decoration: none;
+    text-shadow: none;
+    font-size: inherit;
+    color: var(--nav-link) !important;
+}
+
+/* ===========================
+   Blog
+=========================== */
+.blog-preview {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding);
+}
+
+.blog-preview h4 {
+    position: relative;
+    color: #fff0;
+    display: flex;
+    justify-content: end;
+    align-items: baseline;
+}
+
+.blog-preview h4 a {
+    color: blue;
+    text-decoration: underline;
+    position: relative;
+    font-size: var(--font-size);
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+.blog-preview h4 a::before {
+    content: "[";
+}
+.blog-preview h4 a::after {
+    content: "]";
+}
+.blog-preview h4::before {
+    content: "Blog";
+    color: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.blog-preview *::before, .blog-preview *::after {
+    color: var(--link);
+}
+
+/* ===========================
+   Profile
+=========================== */
+.profile .friends .person img:not(.icon) {
+    max-width: none;
+    max-height: none;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.profile .friends .person p {
+    color: inherit;
+    font-weight: bold;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    font-size: 100%;
+    text-align: center;
+}
+
+.profile .friends .person {
+    display: flex;
+    flex-direction: column-reverse;
+    width: auto;
+    padding: 0;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.general-about .profile-pic {
+    display: block;
+    float: none;
+    margin: 0;
+    height: auto;
+}
+
+.general-about {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--padding);
+}
+
+.person a {
+    width: 100%;
+}
+
+.general-about .details {
+    grid-column: span 3;
+}
+
+.general-about .profile-pic img {
+    max-width: none;
+    max-height: none;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.url-info {
+    margin-top: calc(var(--margin) / 2) !important;
+}
+
+.url-info p:first-of-type {
+    display: none;
+}
+
+.friends-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--padding);
+}
+
+/* ===========================
+   Comments
+=========================== */
+.comments-table td:first-child img:not(.icon),
+.music-table td:first-child img:not(.icon) {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    max-height: none;
+}
+
+.comments-table tr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--padding);
+}
+
+.comments-table td:first-child,
+.music-table td:first-child {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.comments-table tr td:nth-child(2),
+.music-table tr td:nth-child(2) {
+    grid-column: span 3;
+}
+
+.comments-table td p:first-child,
+.comments-table td a {
+    display: block;
+}
+
+.comments-table .report {
+    font-size: inherit;
+    float: right;
+    margin: 8px 5px !important;
+}
+
+/* ===========================
+   Icons
+=========================== */
+.table-section:has(a[href*="instagram"]) td:first-child img.icon,
+.contact .inner a img.icon {
+    display: none !important;
+}
+
+.contact .inner a:before {
+    font-family: monospace;
+    font-size: 1.5em;
+}
+
+.contact .inner a[href*="/addfriend"]::before {
+    content: "♥";
+    margin-right: 0px;
+    color: inherit;
+}
+.contact .inner a[href*="/addfavorite"]::before {
+    content: "★";
+    margin-right: 0px;
+    color: inherit;
+}
+.f-row .f-col a[href*="/unfriend"]::before {
+    content: "✖";
+    margin-right: 0px;
+    color: inherit;
+}
+.f-row .f-col a[href*="/unfavorite"]::before {
+    content: "✩";
+    margin-right: 0px;
+    color: inherit;
+}
+.contact .inner a[href*="im.spacehey.com?user"]::before {
+    content: "✉";
+    margin-right: 0px;
+    color: inherit;
+}
+.contact .inner a[href*="im.spacehey.com/new"]::before {
+    content: "→";
+    margin-right: 0px;
+    color: inherit;
+}
+.contact .inner a[href*="/block"]::before {
+    content: "!";
+    margin-right: 0px;
+    color: inherit;
+}
+.contact .inner a[href*="/soon?new"]::before {
+    content: "♣";
+    margin-right: 0px;
+    color: inherit;
+}
+.contact .inner a[href*="/report"]::before {
+    content: "⚑";
+    margin-right: 0px;
+    color: inherit;
+}
+p.report a[href*="/report?type=comment"]::before {
+    content: "⚑";
+    margin-right: 0px;
+    color: inherit;
+}
+li a[href*="notifications"] img.icon {
+    display: none !important;
+}
+
+li a[href*="notifications"]::before {
+    content: "⌂";
+    margin-right: 0px;
+    color: inherit;
+}
+li a[href="/home"] img.icon {
+    display: none !important;
+}
+li a[href="/home"]::before {
+    content: "⌂";  /* Casa */
+    margin-right: 0px;
+}
+.report a img.icon {
+    display: none !important;
+}
+.report a[href*="report?type=comment"]::before {
+    content: "⚑";
+    margin-right: 0px;
+    color: inherit;
+}
+
+
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+    text-align: left;
+    font-size: 100%;
+    margin: var(--margin) auto 0;
+    padding: var(--padding) 0 var(--margin) 0;
+    background-color: transparent;
+    max-width: var(--max-width);
+}
+
+footer p {
+    vertical-align: middle;
+    margin: 0;
+    font-size: 100%;
+}
+
+footer .copyright {
+    font-size: 100%;
+    text-decoration: underline;
+    text-decoration-thickness: auto;
+    max-width: var(--max-width);
+    margin: auto !important;
+}
+
+footer .links {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+}
+
+/* ===========================
+   Titles
+=========================== */
+.contact .heading h4 {
+    color: transparent !important;
+}
+.contact .heading h4::before {
+    content: "Contacts";
+    color: var(--text) !important;
+}
+
+.table-section .heading h4 {
+    color: transparent !important;
+}
+.table-section .heading h4::before {
+    content: "Interests";
+    color: var(--text) !important;
+}
+
+.table-section:last-of-type .heading h4 {
+    color: transparent !important;
+}
+.table-section:last-of-type .heading h4::before {
+    content: "Links";
+    color: var(--text) !important;
+}
+
+.blurbs .heading h4 {
+    color: transparent !important;
+}
+.blurbs .heading h4::before {
+    content: "Blurbs";
+    color: var(--text) !important;
+}
+
+.friends .heading h4 {
+    color: transparent !important;
+}
+.friends .heading h4::before {
+    content: "Friends";
+    color: var(--text) !important;
+}
+
+.friends#comments .heading h4 {
+    color: transparent !important;
+}
+.friends#comments .heading h4::before {
+    content: "Comments";
+    color: var(--text) !important;
+}
+
+/* ===========================
+   Animations
+=========================== */
+.col.w-40.left span[itemprop="name"] {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    display: block;
+    white-space: nowrap;
+}
+
+.col.w-40.left span[itemprop="name"] h1 {
+    display: inline-block;
+    padding-left: 0;
+    animation: scrollH1 10s linear infinite;
+    margin: 0;
+}
+
+.col.w-40.left span[itemprop="name"] h1::after {
+    content: var(--profile);
+    display: inline-block;
+}
+
+@keyframes scrollH1 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ===========================
+   Transitions
+=========================== */
+.table-section:last-of-type .inner a,
+.contact .inner a {
+    transition: opacity 0.3s ease;
+    width: 100%;
+    display: block;
+}
+
+.table-section:last-of-type .inner:hover a,
+.contact .inner:hover a {
+    opacity: 0.25;
+}
+
+.table-section:last-of-type .inner a:hover,
+.contact .inner a:hover {
+    opacity: 1;
+}
+
+/* ===========================
+   Overrides
+=========================== */
+
+a, .right a, .right form {
+    color: var(--link) !important;
+}
+
+nav *, nav *::before, nav *::after {
+    color: var(--nav-text);
+}
+
+.logout-btn, nav .right a {
+    color: var(--nav-link) !important;
+}
+
+html body div.container div.row.profile div.col.left div.contact {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+/* ===========================
+   Template Overrides
+=========================== */
+@media (max-width: 570px) {
+    .contact .inner,
+    .mood,
+    .table-section:last-of-type .details-table tbody,
+    .general-about,
+    .friends-grid,
+    .comments-table tr {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
