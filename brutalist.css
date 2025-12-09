@@ -390,6 +390,9 @@ nav .links a {
 
 .general-about .details {
     grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding);
 }
 
 .general-about .profile-pic img {
