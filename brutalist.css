@@ -182,6 +182,7 @@ footer,
     margin-top: var(--margin);
     margin-bottom: calc(var(--margin) / 4);
     color: inherit;
+    height: 1.5rem;
 }
 
 .profile .blurbs .section h4 {
