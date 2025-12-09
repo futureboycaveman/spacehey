@@ -43,7 +43,6 @@ a {
 main {
     background: transparent;
     font-size: 100%;
-    padding: var(--padding);
     max-width: none;
     color: var(--text);
 }
@@ -56,6 +55,9 @@ main .left,
 main .right {
     padding: 0;
     width: 100% !important;
+}
+
+navbar {
     max-width: var(--max-width);
     margin: auto;
 }
@@ -182,7 +184,7 @@ footer,
     margin-top: var(--margin);
     margin-bottom: calc(var(--margin) / 4);
     color: inherit;
-    height: 1.5rem;
+    height: 2rem;
 }
 
 .profile .blurbs .section h4 {
@@ -620,11 +622,9 @@ footer .links {
 /* ===========================
    Animations
 =========================== */
+
 .col.w-40.left span[itemprop="name"] {
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
     display: block;
     white-space: nowrap;
 }
@@ -689,6 +689,16 @@ nav *, nav *::before, nav *::after {
 html body div.container div.row.profile div.col.left div.contact {
     display: block !important;
     opacity: 1 !important;
+}
+
+/* ===========================
+   Width
+=========================== */
+
+.general-about, .mood, .contact, .url-info, .table-section, .profile-info, .blog-preview, .blurbs, .friends {
+    width: 100%;
+    margin: auto !important;
+    max-width: var(--max-width);
 }
 
 /* ===========================
