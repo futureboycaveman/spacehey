@@ -294,6 +294,10 @@ nav .links a {
 }
 
 .blog-preview h4 a {
+    position: absolute;
+}
+
+.blog-preview h4 a {
     color: blue;
     text-decoration: underline;
     position: relative;
