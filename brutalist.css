@@ -8,7 +8,6 @@
 :root {
     --padding: 8px;
     --margin: 2.5rem;
-    --max-width: 800px;
 }
 
 /* ===========================
@@ -179,7 +178,7 @@ footer,
 .statistics .heading h4,
 .profile .blurbs .section h4,
 .blog-preview h4 {
-    font-size: 1.5rem;
+    font-size: 0rem;
     margin-top: var(--margin);
     margin-bottom: calc(var(--margin) / 4);
     color: inherit;
@@ -187,6 +186,10 @@ footer,
 
 .profile .blurbs .section h4 {
     font-size: 1rem;
+}
+
+h4::before {
+    font-size: 1.5rem;
 }
 
 .profile .blurbs .section:first-child h4:first-child {
@@ -251,7 +254,7 @@ nav .top {
     position: relative;
     align-items: center;
     margin: auto;
-    max-width: var(--max-width);
+    max-width: var(--nav-width);
 }
 
 nav .top .left {
@@ -261,7 +264,7 @@ nav .top .left {
 nav .links {
     background-color: transparent;
     padding: var(--padding);
-    max-width: var(--max-width);
+    max-width: var(--nav-width);
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -303,6 +306,7 @@ nav .links a {
     font-size: var(--font-size);
     font-weight: 400;
     text-transform: lowercase;
+    position: absolute;
 }
 
 .blog-preview h4 a::before {
