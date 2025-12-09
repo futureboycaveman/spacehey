@@ -660,34 +660,27 @@ footer .links {
 /* ===========================
    Transitions
 =========================== */
+
 .table-section:last-of-type .inner a,
-.contact .inner a {
+.contact .inner a,
+.friends-grid .person a,
+.comments-table td a {
     transition: opacity 0.3s ease;
-    width: 100%;
     display: block;
+    width: 100%;
 }
 
 .table-section:last-of-type .inner:hover a,
-.contact .inner:hover a {
+.contact .inner:hover a,
+.friends-grid:hover .person a,
+.comments-table:hover td a {
     opacity: 0.25;
 }
 
 .table-section:last-of-type .inner a:hover,
-.contact .inner a:hover {
-    opacity: 1;
-}
-
-.friends-grid .person a {
-    transition: opacity 0.3s ease;
-    display: block;
-    width: 100%;
-}
-
-.friends-grid .person:hover a {
-    opacity: 0.25;
-}
-
-.friends-grid .person a:hover {
+.contact .inner a:hover,
+.friends-grid .person:hover a,
+.comments-table tr:hover td a {
     opacity: 1;
 }
 
